@@ -51,6 +51,9 @@ app.get('/registro', async(req, res) => {
         })
     }
 })
+app.get('/', async(req, res) => {
+    res.send('Hello World')
+})
 
 
 
