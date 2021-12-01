@@ -26,12 +26,12 @@ app.post('/registro', async(req, res) => {
     
     try {
         const docu = await Registro.create(req.body)
-        return res.status(201).send({
+        res.status(201).send({
             status: 'success',
             data: docu
         })
     } catch (error) {
-        return res.status(400).send({
+        res.status(400).send({
             status: error,
         })
         
@@ -41,12 +41,12 @@ app.post('/registro', async(req, res) => {
 app.get('/registro', async(req, res) => {
     try {
         const docu = await Registro.find()
-        return res.status(200).send({
+        res.status(200).send({
             status: 'success',
             data: docu
         })
     } catch (error) {
-        return res.status(400).send({
+        res.status(400).send({
             status: error,
         })
     }
